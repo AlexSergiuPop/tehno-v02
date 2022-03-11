@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+nav {
+  position: fixed;
+  width: 100%;
+  min-height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rem;
+  grid-area: nav;
+}
+nav li a {
+  text-decoration: none;
+  padding: 0 1rem;
+  color: #4175b4;
+  font-weight: 700;
+  transition: all 1s;
+}
+nav li a:hover {
+  color: black;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+.logo {
+  height: 3rem;
+  width: 15rem;
+}
+.container {
+  position: relative;
+  display: flex;
+  grid-area: cont;
+  margin: 0 1rem;
+  box-shadow: 0rem 0rem 1rem #626262;
+}
+.section {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  text-shadow: 0rem 0rem 0.3rem white;
+}
+.section:hover {
+  flex: 1.4;
+  color: #b0e2f7;
+  text-shadow: 0rem 0rem 0.3rem black;
+}
+#secOne {
+  background-image: url(./images/Strong_current_wires.jpg);
+  background-size: cover;
+  transition: all 1s;
+  filter: grayscale();
+}
+#secOne:hover {
+  filter: none;
+}
+#secTwo {
+  background-image: url(./images/Weak_current_wire.png);
+  background-size: cover;
+  transition: all 1s;
+  filter: grayscale();
+}
+#secTwo:hover {
+  filter: none;
+}
+#secThree {
+  background-image: url(./images/Structured_cabling.jpg);
+  background-size: cover;
+  transition: all 1s;
+  filter: grayscale();
+}
+#secThree:hover {
+  filter: none;
+}
+#secFour {
+  background-image: url(./images/Electrical_maintenance.jpg);
+  background-size: cover;
+  transition: all 1s;
+  filter: grayscale();
+}
+#secFour:hover {
+  filter: none;
+}
+#secFive {
+  background-image: url(./images/IT_solutions.png.crdownload);
+  background-size: cover;
+  transition: all 1s;
+  filter: grayscale();
+}
+#secFive:hover {
+  filter: none;
+}
+.container h2 {
+  /* color: #4175b4; */
+  padding: 2rem;
+}
+.index {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: repeat(12, minmax(0, 1fr));
+  grid-template-areas:
+    "nav nav nav nav nav nav nav nav nav nav nav nav"
+    "nav nav nav nav nav nav nav nav nav nav nav nav"
+    ". . . . . . . . . . . ."
+    "cont cont cont cont cont cont cont cont cont cont cont cont"
+    "cont cont cont cont cont cont cont cont cont cont cont cont"
+    "cont cont cont cont cont cont cont cont cont cont cont cont"
+    "cont cont cont cont cont cont cont cont cont cont cont cont"
+    "cont cont cont cont cont cont cont cont cont cont cont cont"
+    "cont cont cont cont cont cont cont cont cont cont cont cont"
+    "cont cont cont cont cont cont cont cont cont cont cont cont"
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . .";
+  height: 100vh;
+  /* gap: 0.1rem; */
+}
