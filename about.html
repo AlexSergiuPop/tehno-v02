@@ -11,7 +11,7 @@
     />
     <title>Tehno</title>
   </head>
-  <body class="index">
+  <body class="about">
     <nav class="nav">
       <a href="index.html"
         ><img class="nav__logo" src="./images/tehno_logo.jpg" alt=""
@@ -62,7 +62,11 @@
         </section>
         <section class="footer__left__copyright">
           <h2>
-            Copyright &copy; 2022 Tehno Service. Toate drepturile rezervate
+            Copyright &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            Tehno Service. Toate drepturile rezervate
           </h2>
         </section>
       </section>

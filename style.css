@@ -5,20 +5,35 @@
   font-family: Arial;
 }
 
+.index {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .index .nav__container__links:nth-child(1)::after {
   width: 100%;
 }
 
-.nav {
-  position: fixed;
-  top: 0;
+.about .nav__container__links:nth-child(2)::after {
   width: 100%;
-  height: 15vh;
+}
+
+.contact .nav__container__links:nth-child(6)::after {
+  width: 100%;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  min-height: 15vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20rem;
-  grid-area: nav;
+  padding: 0 10vw;
+  background-color: white;
 }
 
 .nav__container {
@@ -60,11 +75,9 @@
 }
 
 .card-container {
-  position: absolute;
-  top: 15%;
   display: flex;
-  height: 70vh;
-  margin: 0 1rem;
+  min-height: 65vh;
+  margin: auto 1rem;
   box-shadow: 0rem 0rem 1rem #0e76a8;
 }
 
@@ -120,15 +133,13 @@
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
   width: 100%;
-  height: 15vh;
+  min-height: 15vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20rem;
-  grid-area: foot;
+  padding: 0rem 10vw;
+  margin-top: auto;
 }
 
 .footer__left__container {
@@ -169,98 +180,134 @@
   color: #0e76a8;
   padding: 0.5rem;
 }
+
 .footer__right a {
   color: #0e76a8;
   padding: 0.5rem;
   transition: all 1s;
 }
+
 .linkedin:hover {
   transform: scale(2);
   color: #0e76a8;
 }
+
 .facebook:hover {
   transform: scale(1.2);
   color: #4267b2;
 }
+
 .instagram:hover {
   transform: scale(1.2);
   color: #fbad50;
 }
+
 .map {
-  background-color: #b0e2f7;
-  display: flex;
-  grid-area: map;
-  margin: 0 1rem;
-  box-shadow: 0rem 0rem 1rem #626262;
+  margin: 2vh 10vw;
+  box-shadow: 0rem 0rem 1rem #0e76a8;
+  height: 50vh;
+  max-width: 100%;
 }
-.contactInfo {
-  grid-area: continfo;
-  background-color: #b0e2f7;
-  display: flex;
-  margin: 0 1rem;
-  box-shadow: 0rem 0rem 1rem #626262;
-}
-.form {
-  grid-area: form;
-  background-color: #b0e2f7;
-  display: flex;
-  margin: 0 1rem;
-  box-shadow: 0rem 0rem 1rem #626262;
-}
-/* .index {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  grid-template-rows: repeat(12, minmax(0, 1fr));
-  grid-template-areas:
-    "nav nav nav nav nav nav nav nav nav nav nav nav"
-    "nav nav nav nav nav nav nav nav nav nav nav nav"
-    "cont cont cont cont cont cont cont cont cont cont cont cont"
-    "cont cont cont cont cont cont cont cont cont cont cont cont"
-    "cont cont cont cont cont cont cont cont cont cont cont cont"
-    "cont cont cont cont cont cont cont cont cont cont cont cont"
-    "cont cont cont cont cont cont cont cont cont cont cont cont"
-    "cont cont cont cont cont cont cont cont cont cont cont cont"
-    "cont cont cont cont cont cont cont cont cont cont cont cont"
-    "cont cont cont cont cont cont cont cont cont cont cont cont"
-    "foot foot foot foot foot foot foot foot foot foot foot foot"
-    "foot foot foot foot foot foot foot foot foot foot foot foot";
-  height: 100vh;
-} */
-/* .about {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  grid-template-rows: repeat(12, minmax(0, 1fr));
-  grid-template-areas:
-    "nav nav nav nav nav nav nav nav nav nav nav nav"
-    "nav nav nav nav nav nav nav nav nav nav nav nav"
-    ". . . . . . . . . . . ."
-    ". . . . . . . . . . . ."
-    ". . . . . . . . . . . ."
-    ". . . . . . . . . . . ."
-    ". . . . . . . . . . . ."
-    ". . . . . . . . . . . ."
-    ". . . . . . . . . . . ."
-    ". . . . . . . . . . . ."
-    "foot foot foot foot foot foot foot foot foot foot foot foot"
-    "foot foot foot foot foot foot foot foot foot foot foot foot";
-  height: 100vh;
-} */
+
 .contact {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  grid-template-rows: repeat(12, minmax(0, 1fr));
-  grid-template-areas:
-    "nav nav nav nav nav nav nav nav nav nav nav nav"
-    "nav nav nav nav nav nav nav nav nav nav nav nav"
-    ". . . . . . . . . . . ."
-    "map map map map map map map map map map map map"
-    "map map map map map map map map map map map map"
-    "map map map map map map map map map map map map"
-    ". . . . . . . . . . . ."
-    "continfo continfo continfo continfo continfo continfo form form form form form form"
-    "continfo continfo continfo continfo continfo continfo form form form form form form"
-    ". . . . . . . . . . . ."
-    "foot foot foot foot foot foot foot foot foot foot foot foot"
-    "foot foot foot foot foot foot foot foot foot foot foot foot";
-  height: 100vh;
+  min-height: 100vh;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: row;
+  min-height: 30vh;
+  flex: 1;
+  margin: 0 auto;
+  padding: 0 10vw;
+}
+
+.contact-info__details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 1rem 1rem 0rem;
+  width: 50%;
+  border-top: #0e76a8 0.1rem solid;
+  border-bottom: #0e76a8 0.1rem solid;
+}
+
+.contact-info h2 {
+  color: #0e76a8;
+  font-weight: 700;
+  padding: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.contact-info h3 {
+  color: #0e76a8;
+  font-weight: 700;
+  padding: 0.5rem;
+  font-size: 0.7rem;
+}
+
+.contact-info__details__text {
+  height: 50%;
+  width: 100%;
+  padding: 2rem 2rem 0rem 2rem;
+}
+
+.contact-info__details__image {
+  height: 50%;
+  padding: 0rem 2rem 2rem 2rem;
+  width: 100%;
+}
+
+.contact-info__details__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.contact-info__form {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0rem 1rem 1rem;
+  color: #0e76a8;
+  width: 50%;
+  border-top: #0e76a8 0.1rem solid;
+  border-bottom: #0e76a8 0.1rem solid;
+  padding: 2rem;
+}
+
+label {
+  color: #0e76a8;
+  font-weight: 700;
+  padding: 0.5rem;
+  font-size: 0.7rem;
+}
+
+input {
+  padding: 0.5rem 0;
+  border: 0.1rem #0e76a8 solid;
+}
+
+input:focus,
+textarea:focus {
+  outline: #0e76a8;
+}
+
+textarea {
+  color: #0e76a8;
+  font-weight: 700;
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  border: 0.1rem #0e76a8 solid;
+}
+
+button {
+  font-size: 1.3rem;
+  width: 100%;
+  min-height: 2rem;
+  max-height: 4rem;
+  margin: auto;
+  color: white;
+  background-color: #0e76a8;
+  border: 0.1rem #0e76a8 solid;
 }
