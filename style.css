@@ -6,9 +6,10 @@
 }
 
 :root {
-  --fs-small: 0.5rem;
-  --fs-medium: 0.7rem;
-  --fs-large: 1rem;
+  --fs-xs: 0.5rem;
+  --fs-small: 0.7rem;
+  --fs-medium: 0.9rem;
+  --fs-large: 1.1rem;
   --fs-xl: 2.5rem;
 }
 
@@ -59,7 +60,7 @@
   text-decoration: none;
   color: #0e76a8;
   font-weight: 700;
-  font-size: var(--fs-large);
+  font-size: var(--fs-medium);
   transition: all 1s;
 }
 
@@ -166,8 +167,7 @@
   text-decoration: none;
   color: #0e76a8;
   font-weight: 700;
-
-  font-size: var(--fs-medium);
+  font-size: var(--fs-small);
 }
 
 .footer__left__nav__link {
@@ -193,7 +193,7 @@
 }
 
 .footer__left__copyright h2 {
-  font-size: var(--fs-small);
+  font-size: var(--fs-xs);
   color: #0e76a8;
   padding: 0.5rem;
 }
@@ -339,9 +339,10 @@ button {
 
 @media screen and (max-width: 1024px) {
   :root {
-    --fs-small: 0.4rem;
-    --fs-medium: 0.5rem;
-    --fs-large: 0.6rem;
+    --fs-xs: 0.4rem;
+    --fs-small: 0.5rem;
+    --fs-medium: 0.7rem;
+    --fs-large: 0.9rem;
     --fs-xl: 1.5rem;
   }
 
