@@ -5,6 +5,13 @@
   font-family: Arial;
 }
 
+:root {
+  --fs-small: 0.5rem;
+  --fs-medium: 0.7rem;
+  --fs-large: 1rem;
+  --fs-xl: 2.5rem;
+}
+
 .index {
   height: 100vh;
   display: flex;
@@ -19,15 +26,15 @@
   width: 100%;
 }
 
-.contact .header__nav__links:nth-child(5)::after {
-  width: 100%;
-}
-
 .services .header__nav__links:nth-child(3)::after {
   width: 100%;
 }
 
 .projects .header__nav__links:nth-child(4)::after {
+  width: 100%;
+}
+
+.contact .header__nav__links:nth-child(5)::after {
   width: 100%;
 }
 
@@ -52,13 +59,13 @@
   text-decoration: none;
   color: #0e76a8;
   font-weight: 700;
-  font-size: 0.8rem;
+  font-size: var(--fs-large);
   transition: all 1s;
 }
 
 .header__nav__links {
   position: relative;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem;
   transition: all 1s;
 }
 
@@ -135,7 +142,7 @@
   top: 50%;
   transform: translatey(-50%);
   color: white;
-  font-size: 3vw;
+  font-size: var(--fs-xl);
   padding: 2vw;
   text-shadow: 0rem 0rem 0.3rem black;
   z-index: 1;
@@ -159,11 +166,12 @@
   text-decoration: none;
   color: #0e76a8;
   font-weight: 700;
-  padding: 0.5rem;
-  font-size: 0.7rem;
+
+  font-size: var(--fs-medium);
 }
 
 .footer__left__nav__link {
+  padding: 0.5rem;
   position: relative;
   transition: all 1s;
   transition: all 0.5s;
@@ -185,29 +193,30 @@
 }
 
 .footer__left__copyright h2 {
-  font-size: 0.6rem;
+  font-size: var(--fs-small);
   color: #0e76a8;
   padding: 0.5rem;
 }
 
 .footer__right a {
   color: #0e76a8;
-  padding: 0.5rem;
-  transition: all 1s;
+  padding: 0.5vw;
+  transition: all 0.5s;
+  display: inline-block;
 }
 
 .linkedin:hover {
   transform: scale(2);
-  color: #0e76a8;
+  color: #0077b5;
 }
 
 .facebook:hover {
-  transform: scale(1.2);
+  transform: scale(2);
   color: #4267b2;
 }
 
 .instagram:hover {
-  transform: scale(1.2);
+  transform: scale(2);
   color: #fbad50;
 }
 
@@ -246,14 +255,14 @@
   color: #0e76a8;
   font-weight: 700;
   padding: 0.5rem;
-  font-size: 1.3rem;
+  font-size: var(--fs-large);
 }
 
 .contact-info h3 {
   color: #0e76a8;
   font-weight: 700;
   padding: 0.5rem;
-  font-size: 0.7rem;
+  font-size: var(--fs-medium);
 }
 
 .contact-info__details__text {
@@ -289,14 +298,14 @@ label {
   color: #0e76a8;
   font-weight: 700;
   padding: 0.5rem;
-  font-size: 0.7rem;
+  font-size: var(--fs-medium);
 }
 
 input {
   padding: 0.5rem 0;
   border: 0.1rem #0e76a8 solid;
   text-indent: 1rem;
-  font-size: 0.7rem;
+  font-size: var(--fs-medium);
   color: #0e76a8;
   font-weight: 700;
 }
@@ -310,13 +319,13 @@ textarea {
   color: #0e76a8;
   font-weight: 700;
   padding: 0.5rem;
-  font-size: 0.7rem;
+  font-size: var(--fs-medium);
   border: 0.1rem #0e76a8 solid;
   text-indent: 1rem;
 }
 
 button {
-  font-size: 1.3rem;
+  font-size: var(--fs-large);
   width: 100%;
   min-height: 2rem;
   max-height: 4rem;
@@ -326,35 +335,38 @@ button {
   border: 0.1rem #0e76a8 solid;
 }
 
-/* responsive header */
-
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  width: 100%;
-  min-height: 15vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10vw;
-  background-color: white;
-}
+/* responsiveness */
 
 @media screen and (max-width: 1024px) {
+  :root {
+    --fs-small: 0.4rem;
+    --fs-medium: 0.5rem;
+    --fs-large: 0.6rem;
+    --fs-xl: 1.5rem;
+  }
+
   .header {
     flex-direction: column;
-    padding: 1vw 10vw;
+    justify-content: space-around;
+    padding: 1.5vw 5vw;
   }
 
   .header__nav {
     flex-wrap: wrap;
   }
 
+  .header__nav__links {
+    padding: 0.2rem;
+  }
+
   .footer {
-    padding: 3rem 10vw;
+    padding: 3rem 5vw;
     flex-direction: column;
     justify-content: center;
+  }
+
+  .footer__left__nav__link {
+    padding: 0.2rem;
   }
 
   .footer__left {
@@ -388,5 +400,37 @@ button {
     height: 100%;
     object-fit: cover;
     object-position: center;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    min-height: 60vh;
+    flex: 1;
+    margin: 0 auto;
+    padding: 0 10vw;
+  }
+
+  .contact-info__details {
+    margin: 0rem;
+    width: 100%;
+  }
+
+  .contact-info__details__text {
+    padding: 0rem;
+  }
+
+  .contact-info__details__image {
+    padding: 0rem;
+  }
+
+  .contact-info__form {
+    margin: 1rem 0rem;
+    width: 100%;
+    padding: 0rem;
+  }
+
+  .contact-info__form_btn {
+    margin: 0.2rem 0;
   }
 }
