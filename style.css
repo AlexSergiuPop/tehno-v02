@@ -354,6 +354,7 @@ button {
   font-size: var(--fs-xl);
   color: #0e76a8;
   font-weight: 900;
+  text-align: center;
 }
 
 .partners-details__text {
@@ -395,7 +396,7 @@ button {
 }
 
 .partners-details__cards__container__cards:hover img {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .partners-details__cards {
